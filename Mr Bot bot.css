@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(223, 242, 247, 0.5);
+  height: 100vh;
+  margin: 0;
+  background: url(background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.head {
+  position: absolute;
+  width: 30%;
+  height: 9vw;
+  left: 34.5%;
+}
+
+.logo1 {
+  position: absolute;
+  width: 8%;
+  height: 7vw;
+  left: 88%;
+  top: 4%;
+  border-radius: 50%;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: auto;
+  color: black;
+  border-radius: 50px;
+  background-color: blanchedalmond;
+  border: 2px solid black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.chat-container {
+  position: absolute;
+  height: 33vw;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 20px;
+  top: 10vw;
+}
+
+input {
+  border: 0;
+  padding: 15px;
+  margin-left: auto;
+  border-radius: 10px;
+  width: 26.5vw;
+  font-size: 15px;
+}
+
+.btn {
+  position: absolute;
+  width: 5vh;
+  height: 6.2vh;
+  margin-top: 30vw;
+  margin-right: 27.5vw;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gg-mic {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 12px;
+  border-bottom-left-radius: 120px;
+  border-bottom-right-radius: 120px;
+  border: 2px solid;
+  border-top: 0;
+  margin-top: 3px;
+}
+.gg-mic::after,
+.gg-mic::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+.gg-mic::after {
+  border: 2px solid;
+  width: 8px;
+  height: 18px;
+  left: 2px;
+  top: -10px;
+  border-radius: 4px;
+}
+.gg-mic::before {
+  width: 10px;
+  height: 4px;
+  top: 12px;
+  left: 1px;
+  border-right: 4px solid transparent;
+  box-shadow: 0 2px 0, inset -2px 0 0;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 100%;
+  background-color: white;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px;
+  overflow: auto;
+  background-color: #0f4aa0;
+  color: white;
+  box-shadow: 0px 0px 20px #f2efea;
+}
+
+#bot {
+  margin-left: auto;
+}
+
+.img-height {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.response {
+  display: flex;
+  align-items: center;
+  margin: 1%;
+}
+
+.blue {
+  background-color: blue;
+}
