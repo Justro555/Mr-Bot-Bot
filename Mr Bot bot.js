@@ -138,6 +138,7 @@ messagesContainer.appendChild(botDiv);
 
 setTimeout(() => {
   botText.innerText = `${message}`;
+  textToSpeech(message);
 }, 2000
 )
 }
@@ -153,11 +154,23 @@ recoginition.maxAlternatives = 1;
 
 
 
-btn.addEventListener('click',() =>{
-  recoginition.start();
-  recoginition.stop();
-})
 
+let firstclick = "";
+let secondclick = "";
+btn.addEventListener('click',() =>{
+  
+  if(firstclick == ""){
+      btn.classList.add("btn-on");
+      firstclick = "1";
+      recoginition.start();
+      btn.classList.remove("btn-off");
+  }else if(firstclick == "1"){
+      btn.classList.add("btn-off");
+      recoginition.stop();
+      firstclick = "";
+      btn.classList.remove("btn-on")
+  }
+  
   recoginition.onresult = (e) =>{
     let transcript = e.results[e.results.length -1][0].transcript;
       // console.log(transcript);
@@ -182,7 +195,7 @@ const textToSpeech = (string) => {
   console.log(voices);
   msg.text = string;
   msg.lang = "en-US";
-  msg.voice = voices[18];
+  msg.voice = voices[2];
   msg.volume = 1;
   msg.rate = 1;
   msg.pitch = 1; 
